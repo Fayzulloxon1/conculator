@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.5s ease;
+}
+body{
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    background-image: linear-gradient(to bottom right, rgba(79,51,176,1), rgba(210,53,165));
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.canculator{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+}
+.theme-toggler{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+.theme-toggler .active{
+    color: #333;
+}
+.theme-toggler .active::before{
+    background: #fff;
+}
+.theme-toggler::before{
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background: #333;
+    z-index: -1;
+}
+#display{
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+}
+#display::-webkit-scrollbar{
+    display: block;
+    height: 3px;
+}
+button{
+    height:60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+button:hover{
+    transform: scale(1.1s);
+}
+button#equal{
+    height: 130px;
+}
+.canculator{
+    background: #fff;
+}
+.canculator #display{
+    color: #0a1e23;
+}
+.canculator button#clear{
+    background: #ffd5d8;
+    color: #fc4552;
+}
+.canculator button.btn-number{
+    background: #c3eaff;
+    color: #000;
+}
+.canculator button.btn-operator{
+    background: #ffd8fd;
+}
+.canculator button.btn-equal{
+    background: #adf9e7;
+    color: #000;
+}
+
+
+.canculator.dark{
+    background-color: #071115;
+}
+.canculator .dark #display{
+    color: #f8fafd;
+}
+.canculator.dark button#clear{
+    background: #2d191e;
+    color: #bd3740;
+}
+.canculator.dark button.btn-number{
+    background: #1b2f38;
+    color: #f8fafb;
+}
+.canculator.dark button.btn-operator{
+    background: #2e1f39;
+    color: #aa00a4;
+}
+.canculator.dark button.btn-equal{
+    background: #223323;
+    color: #ffffff;
+}
